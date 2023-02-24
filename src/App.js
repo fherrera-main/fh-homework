@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Recovery from './pages/Recovery';
 
+import PasswordRecoverySuccess from './pages/PasswordRecoverySuccess'
 function App() {
   
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/recovery' element={<Recovery/>}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/' element={<Home />}/>
+        <Route path='/password-recovery/success' element={<PasswordRecoverySuccess/>} />
       </Routes>
     </BrowserRouter>
     
