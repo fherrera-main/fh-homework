@@ -5,6 +5,9 @@
   --backColor: #0D6EFD;
 }
 
+*{
+  font-family: 'Montserrat', sans-serif ;
+}
 
 body {
   margin: 0;
@@ -12,7 +15,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--backColor);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
 }
 
 code {
