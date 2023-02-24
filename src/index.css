@@ -6,13 +6,13 @@
 }
 
 *{
-  font-family: 'Montserrat', sans-serif ;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--backColor);
-  color: #fff;
+  background-color: var(--backColor) !important;
+  color: #fff !important;
 }

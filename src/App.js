@@ -9,15 +9,14 @@ function App() {
   
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/recovery' element={<Recovery/>}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/' element={<Home />}/>
-        <Route path='/password-recovery/success' element={<PasswordRecoverySuccess/>} />
-      </Routes>
-    </BrowserRouter>
-    
+      <BrowserRouter>
+        <Routes>
+          <Route path='/password-recovery' element={<Recovery/>}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/' element={<Home />}/>
+          <Route path='/password-recovery/success' element={<PasswordRecoverySuccess/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

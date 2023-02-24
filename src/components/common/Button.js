@@ -1,9 +1,10 @@
 import BootstrapButton from 'react-bootstrap/Button';
+import styles from './Button.module.css';
 
 
 const Button = ({text, onClick}) => {
     return (
-      <BootstrapButton variant='outline-warning' onClick={onClick} >{text}</BootstrapButton>
+      <BootstrapButton className={styles.button} variant='outline-light' onClick={onClick} >{text}</BootstrapButton>
     )
   }
 

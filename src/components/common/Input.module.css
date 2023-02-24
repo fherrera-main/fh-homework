@@ -1,3 +1,33 @@
 .label{
-    font-size: 12px;
+    font-size: 14px;
 }
+.inputContainer {
+
+}
+
+.inputGroup input {
+    background-color: rgba(240, 248, 255, 0);
+    border: 2px solid #FFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    color: #FFF;
+}
+
+.inputGroup input:focus {
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.inputGroup span{
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 0;
+    border-bottom: 2px solid #FFF;
+    padding: 0;
+}
+
+.inputGroup span:first-child {
+    border: none;
+}
+

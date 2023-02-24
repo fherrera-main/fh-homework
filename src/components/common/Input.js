@@ -19,9 +19,9 @@ const Input = (props) => {
   }
 
   return (
-    <div>
-      <Form.Label htmlFor={styles.label}>{props.LabelText}</Form.Label>
-      <InputGroup id={styles.label} className="mb-3">
+    <div className={styles.inputContainer}>
+      <Form.Label htmlFor={styles.label} className={styles.label}>{props.LabelText}</Form.Label>
+      <InputGroup id={styles.label} className={'mb-3 '+ styles.inputGroup}>
         {props.LeftSection && <InputGroup.Text>$</InputGroup.Text>}
         <Form.Control type={props.InputType} />
         {props.RightSection && <InputGroup.Text><span>{setIcon()}</span></InputGroup.Text>}
