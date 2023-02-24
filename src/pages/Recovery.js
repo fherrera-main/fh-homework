@@ -18,14 +18,12 @@ const Recovery = () => {
       </Row>
       <Row>
         <Col>
-            <h2 className={styles.input_text}>Nueva contraseña</h2>
-            <Input/>
+            <Input LeftSection={false} LabelText='Nueva Contraseña' InputType='password' IconName='eye' IconColor='#fff'/>
         </Col>
       </Row>
       <Row>
-        <Col>
-            <h2 className={styles.input_text}>Confirme contraseña</h2>
-            <Input/>
+        <Col className="ml-5">
+            <Input LeftSection={false} LabelText='Confirmar Constraseña' InputType='password' IconName='eye' IconColor='#fff'/>
         </Col>
       </Row>
       <Row>
