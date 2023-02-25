@@ -1,0 +1,17 @@
+.topBarContainer {
+    padding: 48px 20px;
+    max-width: 480px;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .topBarContainer {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .topBarContainer {
+        max-width: 1000px;
+    }
+}
