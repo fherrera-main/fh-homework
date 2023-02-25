@@ -14,7 +14,7 @@ const Input = (props) => {
   ]
 
   const setIcon = () =>{
-    const iconResult = icons.find(icon => icon.iconTitle == props.IconName)
+    const iconResult = icons.find(icon => icon.iconTitle === props.IconName)
     return iconResult ? iconResult.svg : 'No Logo';
   }
 
