@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
-import styles from '../components/PasswordRecovery/Success/success.module.css';
+import styles from '../components/PasswordRecovery/Success/Success.module.css';
 import BackToLink from '../components/common/BackToLink';
 
 const PasswordRecoverySuccess = () => {
