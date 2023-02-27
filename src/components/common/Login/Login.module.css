@@ -13,20 +13,20 @@
 
 .logoContainer {
     text-align: center;
-    margin-bottom: 82px;
 }
 
 .inputContainer {
-    
-    margin: 0px 48px 0px 48px;
+    margin: 82px 48px 0px 48px;
 }
 
 .recoveryLink {
     text-align: end;
-    padding: 0px 48px 0px 48px;
     margin-bottom: 32px;
+    font-size: 9px;
+    text-decoration-line: underline;
 }
 
 .buttonLogin {
     text-align: center;
+    padding-bottom: 93px;
 }
