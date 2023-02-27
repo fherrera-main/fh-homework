@@ -1,7 +1,8 @@
 .button{
     font-size: 14px;
     padding: 8px 32px;
-}
+    width: 215px;
+} 
 
 .button:hover {
     color: #0d58d6;
