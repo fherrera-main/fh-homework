@@ -10,10 +10,12 @@ function App() {
   }
   return (
     <Row  className='app-row-main-container justify-content-sm-center m-0'>
-      <Col className='app-col-main-container'>
+      <Col xs='12' className='app-col-main-container p-0'>
       { 
         validar() && <nav><TopBar /></nav>
       }
+      </Col>
+      <Col xs='12' className='app-col-router-container p-0'>
         <Router />
       </Col>
     </Row>
