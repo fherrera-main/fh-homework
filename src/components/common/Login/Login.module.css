@@ -1,0 +1,32 @@
+.ContainerToCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer {
+    max-width: 255px;
+    display: flex;
+    justify-content: center;
+    padding-top: 93px;
+}
+
+.logoContainer {
+    text-align: center;
+}
+
+.inputContainer {
+    margin: 82px 48px 0px 48px;
+}
+
+.recoveryLink {
+    text-align: end;
+    margin-bottom: 32px;
+    font-size: 9px;
+    text-decoration-line: underline;
+}
+
+.buttonLogin {
+    text-align: center;
+    padding-bottom: 93px;
+}
