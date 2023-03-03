@@ -1,11 +1,20 @@
 .app-row-main-container {
-    padding: 32px 16px;
-}
-
-.app-col-main-container, .app-col-router-container {
-    max-width: 800px;
+    padding: 32px 20px;
 }
 
 .app-col-router-container {
     padding-top: 48px !important;
+    max-width: 480px;
+}
+
+@media screen and (min-width: 768px) {
+    .app-col-router-container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .app-col-router-container {
+        max-width: 1000px;
+    }
 }
