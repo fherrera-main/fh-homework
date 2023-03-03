@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
-import BackToLink from '../common/BackToLink'
-
+import BackToLink from '../common/BackToLink';
+import {Container,Row, Col} from 'react-bootstrap';
+import Button from "../common/Button";
+import Input from '../common/Input';
+import styles from '../CreateAccount/Step1.module.css'
 const Step1 = ({setNewStep}) => {
   const [changeStepHandler] = useOutletContext();
 
@@ -12,9 +15,19 @@ const Step1 = ({setNewStep}) => {
   
   return (
     <div>
-      Paso 1
-      <BackToLink text='Ir a paso 2' reditectTo={'/create-account/step-2'}/>
+      <Col><h1>Primero, necesitamos tus datos personales</h1></Col>
+      <Col xs={12} className={'' + styles.inputContainer}>
+        <Input LeftSection={false} LabelText='Nombre' InputType='text' IconColor='#fff'/>
+        <Input LeftSection={false} LabelText='Apellido Paterno' InputType='text' IconColor='#fff'/>
+        <Input LeftSection={false} LabelText='Apellido Materno' InputType='text' IconColor='#fff'/>
+      </Col>
+      <Col xs={12} className={'' + styles.buttonLogin}>
+          <Button onClic={Step1} text={'Iniciar sesión'} reditectTo={'/create-account/step-2'}/>
+      </Col>
+      {/* <BackToLink text='Ir a paso 2' reditectTo={'/create-account/step-2'}/> */}
+      
     </div>
+    
   )
 }
 
