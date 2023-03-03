@@ -1,16 +1,19 @@
+import { Col, Row } from 'react-bootstrap';
 import './App.css';
 import TopBar from './components/layout/TopBar';
 import Router from './Routes';
 
 function App() {
-  const validar = () => {
-    console.log(localStorage.getItem('USER_DATA'));
-    return localStorage.getItem('USER_DATA');
-  }
   return (
     <>
-      {validar() && <nav><TopBar /></nav>}
-      <Router />
+      <nav>
+          <TopBar />
+      </nav>
+      <Row className='app-row-main-container justify-content-sm-center m-0'>
+        <Col xs='12' className='app-col-router-container p-0'>
+            <Router />
+        </Col>
+      </Row>
     </>
   );
 }
