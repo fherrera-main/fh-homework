@@ -1,15 +1,12 @@
 import './App.css';
 import TopBar from './components/layout/TopBar';
 import Router from './Routes';
+import {useLocation} from 'react-router-dom';
 
 function App() {
-  const validar = () => {
-    console.log(localStorage.getItem('USER_DATA'));
-    return localStorage.getItem('USER_DATA');
-  }
   return (
     <>
-      {validar() && <nav><TopBar /></nav>}
+      <nav><TopBar /></nav>
       <Router />
     </>
   );
