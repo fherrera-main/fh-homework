@@ -1,0 +1,11 @@
+.app-row-main-container {
+    padding: 32px 16px;
+}
+
+.app-col-main-container, .app-col-router-container {
+    max-width: 800px;
+}
+
+.app-col-router-container {
+    padding-top: 48px !important;
+}
