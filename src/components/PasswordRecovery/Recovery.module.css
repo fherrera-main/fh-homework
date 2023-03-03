@@ -4,17 +4,21 @@
 .title {
     font-size: 36px;
     width: 100px;
+    margin-bottom: 48px;
 }
 
 .formContainer {
-    padding: 48px;
-}
-
-.headerlogo {
-    padding-bottom: 70px;
+    padding: 0 20px 48px 20px;
 }
 
 .button{
+    align-items: center;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.back{
     align-items: center;
     text-align: center;
 }
@@ -31,6 +35,7 @@
 
 @media screen and (min-width:768px) {
     .title{
-        white-space: normal;
+        white-space: nowrap;
+        font-size: 24px;
     }
 }
