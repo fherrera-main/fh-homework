@@ -1,9 +1,8 @@
 .app-row-main-container {
-    padding: 32px 20px;
+    padding: 0 20px;
 }
 
 .app-col-router-container {
-    padding-top: 48px !important;
     max-width: 480px;
 }
 
