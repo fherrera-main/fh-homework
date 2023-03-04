@@ -5,10 +5,16 @@
     font-size: 36px;
     width: 100px;
     margin-bottom: 48px;
+    margin-top: 48px;
 }
 
 .formContainer {
     padding: 0 20px 48px 20px;
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .button{
@@ -16,6 +22,7 @@
     text-align: center;
     margin-top: 32px;
     margin-bottom: 32px;
+    white-space: nowrap;
 }
 
 .back{
@@ -23,19 +30,23 @@
     text-align: center;
 }
 
-/* .headerlogo span{
-    background-color: purple;
-    padding-left: 48px;
-    margin-top: 48px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 11px;
-} */
+.input{
+    max-width: 310px;
+}
 
 @media screen and (min-width:768px) {
     .title{
         white-space: nowrap;
         font-size: 24px;
     }
+}
+
+@media screen and (min-width: 576px){
+    .input{
+        max-width: 254px;
+    }
+
+    .formContainer {
+        padding: 0 20px 48px 20px;
+    }    
 }
