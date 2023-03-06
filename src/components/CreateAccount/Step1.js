@@ -15,15 +15,21 @@ const Step1 = ({setNewStep}) => {
   
   return (
     <div>
-      <Col xs={12} className={'' + styles.tittle}><h1>Primero, necesitamos tus datos personales</h1></Col>
-      <Col xs={12} className={'' + styles.inputContainer}>
-        <Input LeftSection={false} LabelText='Nombre' InputType='text' IconColor='#fff'/>
-        <Input LeftSection={false} LabelText='Apellido Paterno' InputType='text' IconColor='#fff'/>
-        <Input LeftSection={false} LabelText='Apellido Materno' InputType='text' IconColor='#fff'/>
-      </Col>
-      <Col xs={12} className={'' + styles.buttonLogin}>
-          <Button onClic={Step1} text={'Continuar'} reditectTo={'/create-account/step-2'}/>
-      </Col>
+      <Container className={''+styles.ContainerToCenter}>
+        <Row className={'' + styles.mainContainer}>
+          <Col xs={12} className={'' + styles.tittle}><h1>Primero, necesitamos tus datos personales</h1></Col>
+          <Col xs={12} className={'' + styles.inputContainer}>
+            <Input LeftSection={false} LabelText='Nombre' InputType='text' IconColor='#fff'/>
+          </Col>
+          <Col xs={12} className={'' + styles.inputContainer2}>
+            <Input LeftSection={false} LabelText='Apellido Paterno' InputType='text' IconColor='#fff'/>
+            <Input LeftSection={false} LabelText='Apellido Materno' InputType='text' IconColor='#fff'/>
+          </Col>
+          <Col xs={12} className={'' + styles.buttonContinue}>
+              <Button onClic={Step1} text={'Continuar'} reditectTo={'/create-account/step-2'}/>
+          </Col>
+        </Row>
+      </Container>
       {/* <BackToLink text='Ir a paso 2' reditectTo={'/create-account/step-2'}/> */}
       
     </div>

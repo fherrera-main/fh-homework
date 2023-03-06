@@ -1,3 +1,18 @@
+.ContainerToCenter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+.inputContainer{
+    margin-top: 24px;
+}
+
+.buttonContinue {
+    margin-top: 18px;
+}
+
 .tittle h1{
     font-size: 16px;
 }
