@@ -33,7 +33,8 @@ const Input = (props) => {
 Input.defaultProps = {
   LeftSection: true,
   RightSection: true,
-  InputType: 'text'
+  InputType: 'text',
+  LabelText: 'Default Label'
 }
 
 
