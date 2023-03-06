@@ -32,9 +32,10 @@ const Step3 = () => {
         <Col className={styles.button}>
           <Button text='Crear cuenta'/>
         </Col>
+        <Col xs={12}>
+        <BackToLink text='Volver al inicio' reditectTo={'/create-account/step-1'}/>
+        </Col>
       </Row>
-      Paso 3
-      <BackToLink reditectTo={'/create-account/step-1'}/>
     </Container>
   )
 }
