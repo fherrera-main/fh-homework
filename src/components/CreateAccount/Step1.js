@@ -15,14 +15,14 @@ const Step1 = ({setNewStep}) => {
   
   return (
     <div>
-      <Col><h1>Primero, necesitamos tus datos personales</h1></Col>
+      <Col xs={12} className={'' + styles.tittle}><h1>Primero, necesitamos tus datos personales</h1></Col>
       <Col xs={12} className={'' + styles.inputContainer}>
         <Input LeftSection={false} LabelText='Nombre' InputType='text' IconColor='#fff'/>
         <Input LeftSection={false} LabelText='Apellido Paterno' InputType='text' IconColor='#fff'/>
         <Input LeftSection={false} LabelText='Apellido Materno' InputType='text' IconColor='#fff'/>
       </Col>
       <Col xs={12} className={'' + styles.buttonLogin}>
-          <Button onClic={Step1} text={'Iniciar sesión'} reditectTo={'/create-account/step-2'}/>
+          <Button onClic={Step1} text={'Continuar'} reditectTo={'/create-account/step-2'}/>
       </Col>
       {/* <BackToLink text='Ir a paso 2' reditectTo={'/create-account/step-2'}/> */}
       
