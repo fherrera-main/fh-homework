@@ -15,21 +15,23 @@ const Step3 = () => {
   });
 
   return (
-    <Container>
+    <Container className={styles.container}>
       <Row>
-        <Col>
+        <Col xs={12}>
           <h2 className={styles.subtitle}>Por último, indícanos los datos de tu cuenta</h2>
         </Col>
-        <Col xs={12}>
-          <Input LabelText='Correo' LeftSection={false} RightSection={false}/>
-        </Col>
-        <Col xs={12}>
+        <Row xs={12} md={12}>
+          <Col className={styles.input}>
+            <Input LabelText='Correo' LeftSection={false} RightSection={false}/>
+          </Col>
+        </Row>
+        <Col xs={12} md={6} className={styles.input}>
           <Input LabelText='Contraseña' LeftSection={false} IconName='eye' IconColor='#fff'/>
         </Col>
-        <Col xs={12}>
+        <Col xs={12} md={6} className={styles.input}>
           <Input LabelText='Confirmar contraseña' LeftSection={false} IconName='eye' IconColor='#fff'/>
         </Col>
-        <Col className={styles.button}>
+        <Col xs={12} className={styles.button}>
           <Button text='Crear cuenta'/>
         </Col>
         <Col xs={12}>
