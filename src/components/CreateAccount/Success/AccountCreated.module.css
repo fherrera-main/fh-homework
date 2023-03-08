@@ -1,0 +1,30 @@
+.subtitle h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.ContainerToCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.rowContainer .col{
+    padding: 0 !important;
+}
+.textCol {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .textContainer {
+        max-width: 550px;
+    }
+}
