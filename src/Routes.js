@@ -8,6 +8,7 @@ import CreateAccount from './pages/CreateAccount';
 import Step1 from './components/CreateAccount/Step1';
 import Step2 from './components/CreateAccount/Step2';
 import Step3 from './components/CreateAccount/Step3';
+import AccountCreated from './components/CreateAccount/Success/AccountCreated';
 
 const Router = () => {
     return (
@@ -23,7 +24,7 @@ const Router = () => {
                         <Route path='/create-account/step-1' element={<Step1/>}/>
                         <Route path='/create-account/step-2' element={<Step2/>}/>
                         <Route path='/create-account/step-3' element={<Step3/>}/>
-                        <Route path='/create-account/account-created' element={<CreateAccount/>}/>
+                        <Route path='/create-account/success' element={<AccountCreated/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

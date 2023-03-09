@@ -1,0 +1,26 @@
+.selectContainer {
+  
+}
+
+.selectContainer select {
+    background-color: rgba(240, 248, 255, 0);
+    border: 2px solid #FFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    color: #FFF;
+    background-image: url('../../assets/dropdown-arrow.svg');
+    font-size: 14px;
+    height: 38px;
+}
+
+.selectContainer select option {
+    background-color: #ffffff00;
+    color: black;
+}
+
+.label{
+    font-size: 14px;
+}
+
