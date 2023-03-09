@@ -23,19 +23,21 @@ const Step2 = () => {
 
   return (
     <div>
-      <Row>
+      <Row className='mx-0'>
         <h3 className={'  ' + styles.stepSubtitle}>Segundo, dinos cuál es tu perfil de persona</h3>
-        <Col xs='12'>
+        <Col xs='12' md='5' className={' '+ styles.formColumnContainer}>
           <Input LabelText='Edad' LeftSection={false} RightSection={false} InputType='number' />
         </Col>
-        <Col className='pb-4' xs='12'>
+        <Col className={'pb-4 '+ styles.formColumnContainer} xs='12' md='5' >
           <Select labelText='Sexo' selectOptions={sexOptions} />
         </Col>
-        <Col xs='12'>
-          <Button text='Continuar' />
-        </Col>
-        <br />
-        <BackToLink text='Ir a paso 3' reditectTo={'/create-account/step-3'} />
+        <Row className='mx-0 px-0'>
+          <Col xs='12' md='5' className={styles.formColumnContainer}>
+            <Button text='Continuar' />
+          </Col>
+          <br />
+          <BackToLink text='Ir a paso 3' reditectTo={'/create-account/success'} />
+        </Row>
       </Row>
     </div>
   )

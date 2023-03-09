@@ -11,9 +11,3 @@
         max-width: 768px;
     }
 }
-
-@media screen and (min-width: 992px) {
-    .app-col-router-container {
-        max-width: 1000px;
-    }
-}

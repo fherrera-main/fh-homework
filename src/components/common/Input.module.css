@@ -13,10 +13,12 @@
     border-right: none;
     border-radius: 0;
     color: #FFF;
+    height: 38px;
 }
 
 .inputGroup input:focus {
     background-color: rgba(240, 248, 255, 0);
+    color: #FFF;
 }
 
 .inputGroup span{
@@ -30,4 +32,3 @@
 .inputGroup span:first-child {
     border: none;
 }
-
