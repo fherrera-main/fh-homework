@@ -20,7 +20,7 @@ const Step3 = () => {
         <Col xs={12}>
           <h2 className={styles.subtitle}>Por último, indícanos los datos de tu cuenta</h2>
         </Col>
-        <Row xs={12} md={12}>
+        <Row xs={12}>
           <Col className={styles.input}>
             <Input LabelText='Correo' LeftSection={false} RightSection={false}/>
           </Col>
