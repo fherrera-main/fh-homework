@@ -36,7 +36,7 @@ const Step2 = () => {
             <Button text='Continuar' />
           </Col>
           <br />
-          <BackToLink text='Ir a paso 3' reditectTo={'/create-account/success'} />
+          <BackToLink text='Ir a paso 3' reditectTo={'/create-account/step-3'} />
         </Row>
       </Row>
     </div>
