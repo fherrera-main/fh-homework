@@ -13,6 +13,7 @@ const CreateAccount = () => {
     if(step === 1 ) navigate('/create-account/step-1');
   },[step]);
   const changeStepHandler = (step) => setStep(step);
+
   const goBack = () => {
     navigate(-1);
   };

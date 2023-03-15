@@ -1,14 +1,14 @@
 import Form from 'react-bootstrap/Form';
 import styles from './Select.module.css';
 
-const Select = ({selectOptions, labelText}) => {
+const Select = ({selectOptions, labelText, selectName, handleSelectChange, selectValue}) => {
     return (
         <div className={"inputContainer " + styles.selectContainer}>
             <Form.Label htmlFor={styles.label} className={styles.label}>{labelText}</Form.Label>
-            <Form.Select>
-                <option>Selecciona tu {labelText.toLowerCase()}</option>
+            <Form.Select name={selectName} onChange={handleSelectChange}>
+                <option disabled>Selecciona tu {labelText.toLowerCase()}</option>
                 {
-                    selectOptions.map((el) => <option key={el.key} value={el.value}>{el.value}</option>)
+                    selectOptions.map((el) => <option key={el.key} value={el.key}>{el.value}</option>)
                 }
             </Form.Select>
         </div>
