@@ -6,9 +6,12 @@ import Button from '../common/Button';
 import Input from '../common/Input';
 import Select from '../common/Select';
 import styles from './Step2.module.css';
+import { useDispatch } from 'react-redux';
+import { set_step2_form_action } from '../../store/actions/createAccountFormActions';
 
 const Step2 = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [changeStepHandler] = useOutletContext();
   const [form, setForm] = useState({})
 
@@ -21,9 +24,10 @@ const Step2 = () => {
   useEffect(() => {
     console.log("Me actualice")
     changeStepHandler(2)
-  });
+  }, []);
 
   const handleClick = () => {
+    dispatch(set_step2_form_action(form))
     navigate('/create-account/step-3')
   }
 

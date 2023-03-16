@@ -2,10 +2,12 @@ import { Col, Row } from 'react-bootstrap';
 import './App.css';
 import TopBar from './components/layout/TopBar';
 import Router from './Routes';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <nav>
           <TopBar />
       </nav>
@@ -14,7 +16,7 @@ function App() {
             <Router />
         </Col>
       </Row>
-    </>
+    </Provider>
   );
 }
 

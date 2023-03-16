@@ -5,16 +5,19 @@ import { Row, Col } from 'react-bootstrap';
 import styles from './Step1.module.css'
 import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
+import { useDispatch } from 'react-redux';
+import { set_step1_form_action } from '../../store/actions/createAccountFormActions';
 
 const Step1 = ({ setNewStep }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [changeStepHandler] = useOutletContext();
   const [form, setForm] = useState({})
 
   useEffect(() => {
     console.log("Me actualice")
     changeStepHandler(1)
-  });
+  }, []);
 
   const handleChange = (e) => {
     const {name, value, type} = e.target;
@@ -26,6 +29,8 @@ const Step1 = ({ setNewStep }) => {
   };
 
   const handleClick = () => {
+    //const action = {type: 'SET_STEP1_FORM'}
+    dispatch(set_step1_form_action(form))
     navigate('/create-account/step-2')
   }
 
