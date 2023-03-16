@@ -7,27 +7,20 @@ import Button from '../../components/common/Button.js';
 import Input from '../../components/common/Input';
 
 const Step3 = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [passconf, setPassconf] = useState('');
   const [changeStepHandler] = useOutletContext();
-
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handlePassconf = (e) => {
-    setPassconf(e.target.value);
-  };
+  const [form, setForm] = useState({});
   
+  const handleChange = (e) => {
+    const {name, value, type} = e.target;
+
+    setForm((prevValues) => ({
+      ...prevValues,
+      [name]: type === 'checkbox' ? e.target.checked : value,
+    }));
+  };
+
   const handleClick = () => {
-    console.log(email);
-    console.log(password);
-    console.log(passconf);
+    //get redux state & post to API -> redirect on response
   };
 
   useEffect(() => {
@@ -36,30 +29,28 @@ const Step3 = () => {
   });
 
   return (
-    <Container className={styles.container}>
-      <Row>
-        <Col xs={12}>
-          <h2 className={styles.subtitle}>Por último, indícanos los datos de tu cuenta</h2>
+    <div>
+      <Row className='mx-0'>
+        <h3 className={'  ' + styles.stepSubtitle}>Por último, indícanos los datos de tu cuenta</h3>
+        <Col xs='12' md='5' className={' ' + styles.formColumnContainer}>
+          <Input handleChange={handleChange} inputName='email' InputType='email' LabelText='Correo' LeftSection={false} RightSection={false}/>
         </Col>
-        <Row xs={12}>
-          <Col className={styles.input}>
-            <Input onChange={handleEmail} InputType='email' LabelText='Correo' LeftSection={false} RightSection={false}/>
+        <Row className='mx-0 p-0'>
+          <Col xs='12' md='6' className={' ' + styles.formColumnContainer}>
+            <Input handleChange={handleChange} inputName='password' LabelText='Contraseña' InputType='password' LeftSection={false} IconName='eye' IconColor='#fff'/>
+          </Col>
+          <Col xs='12' md='6' className={' ' + styles.formColumnContainer}>
+            <Input handleChange={handleChange} inputName='passconf' LabelText='Confirmar contraseña' InputType='password' LeftSection={false} IconName='eye' IconColor='#fff'/>
+          </Col>
+          <Col xs='12' md='6'  className={'mt-3 ' + styles.formColumnContainer}>
+            <Button onClick={handleClick} text='Crear cuenta'/>
           </Col>
         </Row>
-        <Col xs={12} md={6} className={styles.input}>
-          <Input onChange={handlePassword} LabelText='Contraseña' InputType='password' LeftSection={false} IconName='eye' IconColor='#fff'/>
-        </Col>
-        <Col xs={12} md={6} className={styles.input}>
-          <Input onChange={handlePassconf} LabelText='Confirmar contraseña' InputType='password' LeftSection={false} IconName='eye' IconColor='#fff'/>
-        </Col>
-        <Col xs={12} className={styles.button}>
-          <Button onClick={handleClick} text='Crear cuenta'/>
-        </Col>
-        <Col xs={12}>
-        <BackToLink text='Volver al inicio' reditectTo={'/create-account/success'}/>
+        <Col xs='12' className={'mt-3 '+styles.formColumnContainer}>
+          <BackToLink text='Ir a paso 2' reditectTo={'/create-account/step-2'}/>
         </Col>
       </Row>
-    </Container>
+    </div>
   )
 };
 
