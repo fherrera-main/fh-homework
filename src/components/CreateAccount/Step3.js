@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import BackToLink from '../common/BackToLink';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from '../CreateAccount/Step3.module.css';
 import Button from '../../components/common/Button.js';
 import Input from '../../components/common/Input';
+import { useDispatch } from 'react-redux';
+import { set_step3_form_action } from '../../store/actions/createAccountFormActions';
 
 const Step3 = () => {
   const [changeStepHandler] = useOutletContext();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [form, setForm] = useState({});
   
   const handleChange = (e) => {
@@ -20,13 +24,15 @@ const Step3 = () => {
   };
 
   const handleClick = () => {
+    dispatch(set_step3_form_action(form))
+    navigate('/create-account/success')
     //get redux state & post to API -> redirect on response
   };
 
   useEffect(() => {
     console.log("Me actualice")
     changeStepHandler(3)
-  });
+  }, []);
 
   return (
     <div>
