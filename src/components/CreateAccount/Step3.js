@@ -5,10 +5,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import styles from '../CreateAccount/Step3.module.css';
 import Button from '../../components/common/Button.js';
 import Input from '../../components/common/Input';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { set_step3_form_action } from '../../store/actions/createAccountFormActions';
 
 const Step3 = () => {
+  //
+  const correoPersisted = useSelector((state) => state.create_account_reducer.step3.email);
+  //
   const [changeStepHandler] = useOutletContext();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -39,7 +42,7 @@ const Step3 = () => {
       <Row className='mx-0'>
         <h3 className={'  ' + styles.stepSubtitle}>Por último, indícanos los datos de tu cuenta</h3>
         <Col xs='12' md='5' className={' ' + styles.formColumnContainer}>
-          <Input handleChange={handleChange} inputName='email' InputType='email' LabelText='Correo' LeftSection={false} RightSection={false}/>
+          <Input value={correoPersisted} handleChange={handleChange} inputName='email' InputType='email' LabelText='Correo' LeftSection={false} RightSection={false}/>
         </Col>
         <Row className='mx-0 p-0'>
           <Col xs='12' md='6' className={' ' + styles.formColumnContainer}>

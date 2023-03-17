@@ -6,10 +6,13 @@ import Button from '../common/Button';
 import Input from '../common/Input';
 import Select from '../common/Select';
 import styles from './Step2.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { set_step2_form_action } from '../../store/actions/createAccountFormActions';
 
 const Step2 = () => {
+  //
+  const edadPersisted = useSelector((state) => state.create_account_reducer.step2.age);
+  //
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [changeStepHandler] = useOutletContext();
@@ -54,7 +57,7 @@ const Step2 = () => {
       <Row className='mx-0'>
         <h3 className={'  ' + styles.stepSubtitle}>Segundo, dinos cuál es tu perfil de persona</h3>
         <Col xs='12' md='5' className={' ' + styles.formColumnContainer}>
-          <Input LabelText='Edad' inputName='age' handleChange={handleChange} LeftSection={false} RightSection={false} InputType='number' />
+          <Input value={edadPersisted} LabelText='Edad' inputName='age' handleChange={handleChange} LeftSection={false} RightSection={false} InputType='number' />
         </Col>
         <Col className={'pb-4 ' + styles.formColumnContainer} xs='12' md='5' >
           <Select labelText='Sexo' selectName='sex' handleSelectChange={handleSelectChange} selectOptions={sexOptions} />
