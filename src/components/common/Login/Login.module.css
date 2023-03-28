@@ -1,4 +1,16 @@
-.ContainerToCenter {
+.loginFormContainer {
+   
+}
+
+@media screen and (min-width:768px) {
+    .loginFormContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
+}
+/* .ContainerToCenter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,4 +41,4 @@
 .buttonLogin {
     text-align: center;
     padding-bottom: 93px;
-}
+} */
